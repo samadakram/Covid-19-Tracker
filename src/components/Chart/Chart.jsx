@@ -9,7 +9,7 @@ import styles from './Chart.module.css';
 // Import API
 import { fetchDailyData } from '../../api';
 
-const Chart = () => {
+const Chart = ({ data: {confirmed, recovered, deaths}, country }) => {
 
     const [dailyData, setDailyData] = useState([]);
 
@@ -44,9 +44,34 @@ const Chart = () => {
                 />) : null
     );
 
+    // Bar Chart for specific Country
+    const barChart = (
+        confirmed
+            ? (
+                <Bar 
+                    data= {{
+                        labels: ['Actice Cases', 'Recovered', 'Deaths'],
+                        datasets: [{
+                            label: 'People',
+                            backgroundColor: [
+                                'rgba(0, 0, 255, 0.5)',
+                                 'rgba(0, 255, 0, 0.5)',
+                                 'rgba(255, 0, 0, 0.5)',
+                            ],
+                            data: [confirmed, recovered, deaths]
+                        }]
+                    }}
+                    options={{
+                        legend: {display: false},
+                        title: {display: true, text: `Current State in ${country}`}
+                    }}
+                />
+            ) : null
+    );
+
     return (
         <div className={styles.container}>
-            {lineChart}
+            {country ? barChart : lineChart}
         </div>
     )
 }
