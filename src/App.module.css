@@ -13,3 +13,9 @@ body {
 .chart{
     border: 1px solid black;
 }
+
+@media (max-width: 770px) {
+    .container {
+        margin: 0 10%;
+    }
+}
