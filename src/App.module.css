@@ -5,3 +5,11 @@ body {
 .container{
     border: 1px solid brown;
 }
+
+.cards{
+    border: 1px solid purple;
+}
+
+.chart{
+    border: 1px solid black;
+}
