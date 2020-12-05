@@ -8,6 +8,8 @@ body {
 
 .cards{
     border: 1px solid purple;
+    padding-left: 10PX;
+    padding-right: 10px;
 }
 
 .chart{
