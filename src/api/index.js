@@ -16,9 +16,9 @@ export const fetchData = async () => {
 // Function for Chart
 export const fetchDailyData = async () => {
     try {
-        const {data} = await axios.get(`${url}/daily`);
+        const { data } = await axios.get(`${url}/daily`);
 
-        const modifiedData = data.map((dailyData)=> ({
+        const modifiedData = data.map((dailyData) => ({
             confirmed: dailyData.confirmed.total,
             deaths: dailyData.deaths.total,
             date: dailyData.reportDate,
@@ -34,9 +34,9 @@ export const fetchDailyData = async () => {
 
 export const countries = async () => {
     try {
-        const response = await axios.get(`${url}/countries`);
+        const { data: { countries } } = await axios.get(`${url}/countries`);
 
-        console.log(response);
+        return countries.map((country)=> country.name);
     } catch (error) {
         console.log(error);
     }
