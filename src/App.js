@@ -38,10 +38,10 @@ class App extends React.Component {
       <div className={styles.container}>
         <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Grid container>
-          <Grid item xs={4} className={styles.cards}>
+          <Grid item xs={12} md={3} className={styles.cards}>
             <Cards data={data} />
           </Grid>
-          <Grid item xs={8} className={styles.chart}>
+          <Grid item xs={12} md={9} className={styles.chart}>
             <Chart data={data} country={country} />
           </Grid>
         </Grid>
