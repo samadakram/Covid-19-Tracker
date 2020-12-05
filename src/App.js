@@ -17,7 +17,7 @@ class App extends React.Component {
 
   state = {
     data: {},
-    country: ''
+    country: '',
   }
 
   async componentDidMount() {
@@ -32,7 +32,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { data } = this.state;
+    const { data, country } = this.state;
 
     return (
       <div className={styles.container}>
@@ -42,7 +42,7 @@ class App extends React.Component {
             <Cards data={data} />
           </Grid>
           <Grid item xs={7} className={styles.chart}>
-            <Chart />
+            <Chart data={data} country={country} />
           </Grid>
         </Grid>
       </div>
