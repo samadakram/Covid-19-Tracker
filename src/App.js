@@ -1,20 +1,30 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.css';
+
+//Material Ui Grid
+import { Grid } from '@material-ui/core';
 
 // Import Components
 import Cards from './components/Cards/Cards';
 import Chart from './components/Chart/Chart';
 import CountryPicker from './components/CountryPicker/CountryPicker';
 
+
 class App extends React.Component {
-  render () {
+  render() {
     return (
-      <div>
-        <Cards />
+      <div className={styles.container}>
         <CountryPicker />
-        <Chart />
+        <Grid container>
+          <Grid item xs={5}>
+            <Cards />
+          </Grid>
+          <Grid item xs={7}>
+            <Chart />
+          </Grid>
+        </Grid>
       </div>
-    );    
+    );
   }
 }
 
