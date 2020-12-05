@@ -18,11 +18,11 @@ const Cards = ({ data: { confirmed, recoverd, deaths, lastUpdate } }) => {
             <Grid container spacing={3} justify="center" direction="column">
                 <Grid item component={Card}>
                     <CardContent>
-                        <Typography color="textSecondary" gutterBottom>Active Cases</Typography>
+                        <Typography color="textSecondary" gutterBottom>ACTIVE CASES</Typography>
                         <Typography variant="h5">
                             <Countup start={0} end={confirmed.value} duration={1.5} separator="," />
                         </Typography>
-                        <Typography color="textSecondary">DATE</Typography>
+                        <Typography color="textSecondary"> {new Date(lastUpdate).toDateString()} </Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card}>
