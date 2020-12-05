@@ -17,6 +17,7 @@ class App extends React.Component {
 
   state = {
     data: {},
+    country: ''
   }
 
   async componentDidMount() {
@@ -25,11 +26,15 @@ class App extends React.Component {
     this.setState({ data: fetchedData });
   }
 
+  handleCountryChange = async (country) => {
+
+  }
+
   render() {
     const { data } = this.state;
     return (
       <div className={styles.container}>
-        <CountryPicker />
+        <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Grid container>
           <Grid item xs={5} className={styles.cards}>
             <Cards data={data} />
