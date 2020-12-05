@@ -8,7 +8,7 @@ import { Card, CardContent, Typography, Grid } from '@material-ui/core';
 
 // Import Style File
 import styles from './Cards.module.css';
-const Cards = ({ data: { confirmed, recoverd, deaths, lastUpdate } }) => {
+const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
 
     if (!confirmed) {
         return <h1>Loading...</h1>
@@ -28,15 +28,19 @@ const Cards = ({ data: { confirmed, recoverd, deaths, lastUpdate } }) => {
                 <Grid item component={Card}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Recovered</Typography>
-                        <Typography variant="h5">REAL DATA</Typography>
-                        <Typography color="textSecondary">DATE</Typography>
+                        <Typography variant="h5">
+                            <Countup start={0} end={recovered.value} duration={1.5} separator="," />
+                        </Typography>
+                        <Typography color="textSecondary"> {new Date(lastUpdate).toDateString()} </Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Deaths</Typography>
-                        <Typography variant="h5">REAL DATA</Typography>
-                        <Typography color="textSecondary">DATE</Typography>
+                        <Typography variant="h5">
+                            <Countup start={0} end={deaths.value} duration={1.5} separator="," />
+                        </Typography>
+                        <Typography color="textSecondary"> {new Date(lastUpdate).toDateString()} </Typography>
                     </CardContent>
                 </Grid>
             </Grid>
