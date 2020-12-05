@@ -13,18 +13,20 @@ const CountryPicker = () => {
 
     const [fetchedCountries, setFetchedCountries] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         const fetchAPI = async () => {
             setFetchedCountries(await fetchCountries);
         }
 
         fetchAPI();
-    },[setFetchedCountries]);
+    }, [setFetchedCountries]);
+
 
     return (
         <FormControl className={styles.formControl}>
             <NativeSelect>
                 <option value="global">Global</option>
+                {fetchedCountries.map((country, ind) => <option key={ind} value={country}>{country}</option>)}
             </NativeSelect>
         </FormControl>
     )
