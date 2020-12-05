@@ -12,3 +12,14 @@ export const fetchData = async () => {
         console.log(error);
     }
 }
+
+// Function for Chart
+export const fetchDailyData = async () => {
+    try {
+        const {data} = await axios.get(`${url}/daily`);
+
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
