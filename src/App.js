@@ -16,10 +16,10 @@ class App extends React.Component {
       <div className={styles.container}>
         <CountryPicker />
         <Grid container>
-          <Grid item xs={5}>
+          <Grid item xs={5} className={styles.cards}>
             <Cards />
           </Grid>
-          <Grid item xs={7}>
+          <Grid item xs={7} className={styles.chart}>
             <Chart />
           </Grid>
         </Grid>
