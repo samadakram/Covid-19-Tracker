@@ -5,9 +5,9 @@ import { Card, CardContent, Typography, Grid } from '@material-ui/core';
 
 // Import Style File
 import styles from './Cards.module.css';
-const Cards = ({confirmed, recoverd, deaths, lastUpdate}) => {
+const Cards = ({ data: { confirmed, recoverd, deaths, lastUpdate } }) => {
 
-    if (!confirmed){
+    if (!confirmed) {
         return <h1>Loading...</h1>
     }
     return (
