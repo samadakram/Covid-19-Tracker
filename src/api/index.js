@@ -29,3 +29,15 @@ export const fetchDailyData = async () => {
         console.log(error);
     }
 }
+
+// Country Picker Function
+
+export const Countries = async () => {
+    try {
+        const response = await axios.get(`${url}/countries`);
+
+        console.log(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
