@@ -14,11 +14,11 @@ const CountryPicker = () => {
     const [fetchedCountries, setFetchedCountries] = useState([]);
 
     useEffect(()=>{
-        const fetchCountries = async () => {
+        const fetchAPI = async () => {
             setFetchedCountries(await fetchCountries);
         }
 
-        fetchCountries();
+        fetchAPI();
     },[setFetchedCountries]);
 
     return (
