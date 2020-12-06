@@ -27,6 +27,7 @@ body {
 
 .chart {
     border: 1px solid black;
+    padding-top: 2%;
 }
 
 @media (max-width: 770px) {
