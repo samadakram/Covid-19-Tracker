@@ -14,6 +14,11 @@ body {
     background-color: #DFD297;
 }
 
+.image {
+    width: 200px;
+    margin-right: 0;
+}
+
 .cards {
     border: 1px solid purple;
     padding-left: 10PX;
@@ -27,5 +32,13 @@ body {
 @media (max-width: 770px) {
     .container {
         margin: 0 10%;
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    .image {
+        width: 50%;
+        margin: 10px 0 15px 0;
     }
 }
