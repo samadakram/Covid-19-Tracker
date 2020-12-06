@@ -3,9 +3,7 @@ body {
     overflow-x: hidden;
 }
 
-.container {
-    
-}
+.container {}
 
 .header {
     display: flex;
