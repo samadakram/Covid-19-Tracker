@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    border: 1px solid brown;
+    
 }
 
 .header {
@@ -20,13 +20,11 @@ body {
 }
 
 .cards {
-    border: 1px solid purple;
     padding-left: 10PX;
     padding-right: 10px;
 }
 
 .chart {
-    border: 1px solid black;
     padding-top: 2%;
 }
 
