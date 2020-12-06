@@ -1,5 +1,6 @@
 body {
     background-color: rgb(250, 250, 250);
+    /* overflow-x: hidden; */
 }
 
 .container {
@@ -26,6 +27,7 @@ body {
 
 .chart {
     padding-top: 3%;
+    padding-left: 2%;
 }
 
 @media (max-width: 770px) {
