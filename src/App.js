@@ -40,7 +40,7 @@ class App extends React.Component {
     return (
       <div className={styles.container}>
         <div className={styles.header}>
-          <img src={headerImage} alt="Covid Image" className={styles.image} />
+          <img src={headerImage} alt="Covid" className={styles.image} />
           <CountryPicker handleCountryChange={this.handleCountryChange} />
         </div>
         <Grid container>
