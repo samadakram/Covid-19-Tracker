@@ -2,17 +2,25 @@ body {
     background-color: rgb(250, 250, 250);
 }
 
-.container{
+.container {
     border: 1px solid brown;
 }
 
-.cards{
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+    background-color: #DFD297;
+}
+
+.cards {
     border: 1px solid purple;
     padding-left: 10PX;
     padding-right: 10px;
 }
 
-.chart{
+.chart {
     border: 1px solid black;
 }
 
