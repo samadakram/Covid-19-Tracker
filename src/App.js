@@ -37,7 +37,12 @@ class App extends React.Component {
     return (
       <div className={styles.container}>
         <div className={styles.header}>
-          <CountryPicker handleCountryChange={this.handleCountryChange} />
+          <div className={styles.image}>
+
+          </div>
+          <div>
+            <CountryPicker handleCountryChange={this.handleCountryChange} />
+          </div>
         </div>
         <Grid container>
           <Grid item xs={12} md={3} className={styles.cards}>
