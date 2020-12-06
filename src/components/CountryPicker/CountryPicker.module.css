@@ -3,6 +3,11 @@
     background-color: rgb(236 215 215);
 }
 
+.native {
+    padding-left: 10px;
+    font-weight: bold !important;
+}
+
 @media (max-width: 770px) {
     .formControl {
         width: 50%;
