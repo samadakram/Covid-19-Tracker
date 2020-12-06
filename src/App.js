@@ -9,6 +9,9 @@ import Cards from './components/Cards/Cards';
 import Chart from './components/Chart/Chart';
 import CountryPicker from './components/CountryPicker/CountryPicker';
 
+// Import Image
+import headerImage from './image/covid.png'
+
 // Import Api
 import { fetchData } from './api';
 
@@ -37,12 +40,8 @@ class App extends React.Component {
     return (
       <div className={styles.container}>
         <div className={styles.header}>
-          <div className={styles.image}>
-
-          </div>
-          <div>
-            <CountryPicker handleCountryChange={this.handleCountryChange} />
-          </div>
+          <img src={headerImage} alt="Covid Image" className={styles.image} />
+          <CountryPicker handleCountryChange={this.handleCountryChange} />
         </div>
         <Grid container>
           <Grid item xs={12} md={3} className={styles.cards}>
